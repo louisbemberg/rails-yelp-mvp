@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Here's a list of all the restaurants</h1>
+
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+    <!--       <th colspan="1"></th> -->
+        </tr>
+      </thead>
+
+    <tbody>
+      <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= restaurant.name %> </td>
+        <td><%= link_to "Show", restaurant_path(restaurant) %><td> <!-- ASK TEACHER WHY restaurant and not restaurant_path -->
+        <% end %>
+      </tr>
+    </tbody>
+  </div>
+  <div>
+    <%= link_to "Create New Restaurant", new_restaurant_path %>
+  </div>
+</div>
